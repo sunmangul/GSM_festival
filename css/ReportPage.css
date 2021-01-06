@@ -1,0 +1,43 @@
+*{
+    font-family: 'East Sea Dokdo', cursive;
+font-family: 'Sunflower', sans-serif;
+}
+
+.logo{
+    display: block;
+    margin: 0 auto;
+}
+
+h2{
+    width: 298px;
+    height: 43px;
+    text-align: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin-left: 42%;
+    background-color: #FF9E44;
+}
+
+.div{
+    width: 1200px;
+    height: 700px;
+    margin-left: 18%;
+    background-color: #FF9E44;
+}
+
+.name{
+    text-align: center;
+
+}
+
+.number{
+    text-align: center;
+}
+
+.button{
+    
+    margin-left: 85%;
+    margin-bottom: auto;
+    background: #C9762A;
+}

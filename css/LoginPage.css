@@ -1,0 +1,31 @@
+.logo{
+    display: block;
+    margin: 0 auto;
+}
+
+.login{
+    padding: 150px;
+    border: 1px solid #FF9E44;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin-left: 572px;
+    background-color: #FF9E44;
+}
+
+.login-text{
+    width: 100px;
+    height: 40px;
+    margin-bottom: 1px;
+    display: flex; 
+	justify-content: center; 
+	align-items: center;
+    background-color: #DA802D;
+}
+
+.id-pw{
+    width: 300px;
+    height: 100px;
+    background-color: #DA802D;
+} 
+

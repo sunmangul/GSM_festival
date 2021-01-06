@@ -1,0 +1,22 @@
+.logo{
+	display: block;
+	margin: 0 auto;
+}
+
+.Signin{
+    width: 541px;
+    height: 345px;
+    margin-left: 32%;
+    text-align: center;
+    background: #FF9E44;
+}
+
+.Signin h2{
+    width: 136px;
+    height: 31px;
+    text-align: center;
+    display: flex; 
+	justify-content: center; 
+	align-items: center;
+    background: #DA802D;    
+}
