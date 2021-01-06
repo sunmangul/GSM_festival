@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    $mysql_hostname = '127.0.0.1';
+    $mysql_hostname = '';
     $mysql_username = 'root';
     $mysql_password = 'shaki0920';
     $mysql_database = 'member';
