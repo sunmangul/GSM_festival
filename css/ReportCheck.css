@@ -40,3 +40,26 @@ ul li {
     margin-left: auto; 
     margin-right: auto;
 }
+
+.list2{
+    padding: 150px;
+    border: 1px solid #CCC;
+    text-align: left;
+    width: 1600px;
+    height: 700px;
+    margin-left: 150px;
+    background-color: #CCC;
+}
+.button{
+    position:absolute;
+    margin-left: 85%;
+    margin-top: -67px;
+    background: #5f5e5e;
+}
+.imgg{
+    position: absolute;
+    margin-top: 375px;
+    margin-left: -1570px;
+    width: 400px;
+    height: 300px;
+}
