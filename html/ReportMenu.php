@@ -1,3 +1,17 @@
+<?php
+session_start();
+if(!isset($_SESSION['is_login'])){
+}
+    $mysql_hostname = '127.0.0.1';
+    $mysql_username = 'root';
+    $mysql_password = 'password';
+    $mysql_database = 'member';
+    $mysql_port = '3306';
+
+    $dsn = 'mysql:host='.$mysql_hostname.';dbname='.$mysql_database.';port='.$mysql_port;
+    $pdo = new PDO($dsn, $mysql_username, $mysql_password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+?>
 <!doctype html>
 <head>
 <meta charset="UTF-8">
@@ -12,24 +26,30 @@
 </head>
 <body>
 <div id="board_area"> 
-  <a href="../html/MainPage.html"><img src="../imgs/Festival Logo.png" style="width: 75px; height: 75px;" class="logo"></a>
+  <a href="../html/MainPage.php"><img src="../imgs/Festival Logo.png" style="width: 75px; height: 75px;" class="logo"></a>
     <table class="list-table">
-      <thead>
+      <thead class="menu">
           <tr>
-              <th width="70">작성자</th>
-                <th width="500">제목</th>
-                <th width="120">첨부파일</th>
+              <th width="70">제목</th>
+                <th width="500">작성자</th>
+                <tbody>
+                <?php
+                 $nRows = $pdo->query('select count(*) from list')->fetchColumn(); 
+                  for($i = 1;$i<=$nRows;$i++){
+                    $stmt = $pdo->prepare("SELECT * FROM list where lid = $i");
+                    $stmt->execute();
+                    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+              ?>
+                  <tr>
+                  <td width="1200"><a href='ReportCheck.php?lid=<?=$row['lid']?>'><?=$row['title']?></a></td>
+                  <td width="100"><a href='ReportCheck.php?lid=<?=$row['lid']?>'><?=$row['uid']?></a></td>
+                  </tr>
+                  <?php
+                }
+                ?>
+              </tbody>
             </tr>
         </thead>
-      <tbody>
-        <tr>
-          <td width="70"></td>
-          <td width="500"><a href=""></a></td>
-          <td width="120"></td>
-          <td width="100"></td>
-          <td width="100"></td>
-        </tr>
-      </tbody>
     </table>
   </div>
 </body>
